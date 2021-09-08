@@ -60,7 +60,7 @@ $(document).ready(function(){
 				success: function(data){
 					console.log(data);
 					$(".button").attr("disabled", false);	
-					$("#result_table").append(data);
+					$("#result-table").append(data);
 				},
 				error: function(error){
 					console.log(error);
