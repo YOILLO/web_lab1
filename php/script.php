@@ -1,5 +1,8 @@
 <?php
 
+$server_timezone = 3;
+
+session_start();
 
 function validate_x($val){
 	if(isset($val))
@@ -64,7 +67,7 @@ if (validate_x($Xval) && validate_y($Yval) && validate_r($Rval) && validate($tim
 	
 	$INSIDE = check_cicrcle_area($Xval, $Yval, $Rval) || check_squad_area($Xval, $Yval, $Rval) || check_triangle_area($Xval, $Yval, $Rval);
 	$CONVERTED_INSIDE = $INSIDE ? "Внутри": "Снаружи";
-	$current_time = date("j M o G:i:s", time()-$timezone*60);
+	$current_time = date("j M o G:i:s", time()-$timezone*60 - $server_timezone*60*60);
 	$executionTime = round(microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'], 7);
 	
 	$ANSWER = "<tr>";
@@ -75,6 +78,8 @@ if (validate_x($Xval) && validate_y($Yval) && validate_r($Rval) && validate($tim
 	$ANSWER .= "<td>" . $executionTime . "</td>";
 	$ANSWER .= "<td>" . $CONVERTED_INSIDE . "</td>";
 	$ANSWER .= "</tr>";
+	
+	$_SESSION["table"] .= $ANSWER;
 	
 	echo $ANSWER;
 }

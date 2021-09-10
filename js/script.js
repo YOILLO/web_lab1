@@ -19,6 +19,46 @@ $(document).ready(function(){
 	
 		function validate_X(){
 			if ($(".x-checkbox").is(":checked")){
+				if (($("#x-checkbox1").is(":checked") && $("#x-checkbox2").is(":checked"))||
+					($("#x-checkbox1").is(":checked") && $("#x-checkbox3").is(":checked"))||
+					($("#x-checkbox1").is(":checked") && $("#x-checkbox4").is(":checked"))||
+					($("#x-checkbox1").is(":checked") && $("#x-checkbox5").is(":checked"))||
+					($("#x-checkbox1").is(":checked") && $("#x-checkbox6").is(":checked"))||
+					($("#x-checkbox1").is(":checked") && $("#x-checkbox7").is(":checked"))||
+					($("#x-checkbox1").is(":checked") && $("#x-checkbox8").is(":checked"))||
+					($("#x-checkbox1").is(":checked") && $("#x-checkbox9").is(":checked"))||
+					($("#x-checkbox2").is(":checked") && $("#x-checkbox3").is(":checked"))||
+					($("#x-checkbox2").is(":checked") && $("#x-checkbox4").is(":checked"))||
+					($("#x-checkbox2").is(":checked") && $("#x-checkbox5").is(":checked"))||
+					($("#x-checkbox2").is(":checked") && $("#x-checkbox6").is(":checked"))||
+					($("#x-checkbox2").is(":checked") && $("#x-checkbox7").is(":checked"))||
+					($("#x-checkbox2").is(":checked") && $("#x-checkbox8").is(":checked"))||
+					($("#x-checkbox2").is(":checked") && $("#x-checkbox9").is(":checked"))||
+					($("#x-checkbox3").is(":checked") && $("#x-checkbox4").is(":checked"))||
+					($("#x-checkbox3").is(":checked") && $("#x-checkbox5").is(":checked"))||
+					($("#x-checkbox3").is(":checked") && $("#x-checkbox6").is(":checked"))||
+					($("#x-checkbox3").is(":checked") && $("#x-checkbox7").is(":checked"))||
+					($("#x-checkbox3").is(":checked") && $("#x-checkbox8").is(":checked"))||
+					($("#x-checkbox3").is(":checked") && $("#x-checkbox9").is(":checked"))||
+					($("#x-checkbox4").is(":checked") && $("#x-checkbox5").is(":checked"))||
+					($("#x-checkbox4").is(":checked") && $("#x-checkbox6").is(":checked"))||
+					($("#x-checkbox4").is(":checked") && $("#x-checkbox7").is(":checked"))||
+					($("#x-checkbox4").is(":checked") && $("#x-checkbox8").is(":checked"))||
+					($("#x-checkbox4").is(":checked") && $("#x-checkbox9").is(":checked"))||
+					($("#x-checkbox5").is(":checked") && $("#x-checkbox6").is(":checked"))||
+					($("#x-checkbox5").is(":checked") && $("#x-checkbox7").is(":checked"))||
+					($("#x-checkbox5").is(":checked") && $("#x-checkbox8").is(":checked"))||
+					($("#x-checkbox5").is(":checked") && $("#x-checkbox9").is(":checked"))||
+					($("#x-checkbox6").is(":checked") && $("#x-checkbox7").is(":checked"))||
+					($("#x-checkbox6").is(":checked") && $("#x-checkbox8").is(":checked"))||
+					($("#x-checkbox6").is(":checked") && $("#x-checkbox9").is(":checked"))||
+					($("#x-checkbox7").is(":checked") && $("#x-checkbox8").is(":checked"))||
+					($("#x-checkbox7").is(":checked") && $("#x-checkbox9").is(":checked"))||
+					($("#x-checkbox8").is(":checked") && $("#x-checkbox9").is(":checked")))
+				{
+					$(".x-box-label").addClass("box-error");
+					return false;
+				}	
 				$(".x-box-label").removeClass("box-error");
 				return true;
 			}
@@ -30,6 +70,20 @@ $(document).ready(function(){
 		
 		function validate_R(){
 			if ($(".r-checkbox").is(":checked")){
+				if (($("#r-checkbox1").is(":checked") && $("#r-checkbox2").is(":checked"))||
+					($("#r-checkbox1").is(":checked") && $("#r-checkbox3").is(":checked"))||
+					($("#r-checkbox1").is(":checked") && $("#r-checkbox4").is(":checked"))||
+					($("#r-checkbox1").is(":checked") && $("#r-checkbox5").is(":checked"))||
+					($("#r-checkbox2").is(":checked") && $("#r-checkbox3").is(":checked"))||
+					($("#r-checkbox2").is(":checked") && $("#r-checkbox4").is(":checked"))||
+					($("#r-checkbox2").is(":checked") && $("#r-checkbox5").is(":checked"))||
+					($("#r-checkbox3").is(":checked") && $("#r-checkbox4").is(":checked"))||
+					($("#r-checkbox3").is(":checked") && $("#r-checkbox5").is(":checked"))||
+					($("#r-checkbox4").is(":checked") && $("#r-checkbox5").is(":checked")))
+					{
+						$(".r-box-label").addClass("box-error");
+						return false;
+					}
 				$(".r-box-label").removeClass("box-error");
 				return true;
 			}
